@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/patientMainpageFragment"
+        android:icon="@drawable/patient_mainpage_icon"
+        android:title="Anasayfa" />
+    <item
+        android:id="@+id/patientMedicineFragment"
+        android:icon="@drawable/patient_medicine_icon"
+        android:title="İlaçlarım" />
+    <item
+        android:id="@+id/patientMessagePreviousFragment"
+        android:icon="@drawable/patient_message_icon"
+        android:title="Mesajlarım" />
+    <item
+        android:id="@+id/patientSettingsFragment"
+        android:icon="@drawable/patient_setting_icon"
+        android:title="Ayarlar" />
+</menu>

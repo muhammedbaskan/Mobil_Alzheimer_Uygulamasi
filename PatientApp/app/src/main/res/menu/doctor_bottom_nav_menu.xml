@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/doctorPatientInfoFragment"
+        android:icon="@drawable/doctor_patient_info"
+        android:title="Hastalarım" />
+    <item
+        android:id="@+id/doctorMessagePreviousFragment"
+        android:icon="@drawable/patient_message_icon"
+        android:title="Mesajlarım" />
+    <item
+        android:id="@+id/doctorSettingsFragment"
+        android:icon="@drawable/patient_setting_icon"
+        android:title="Ayarlar" />
+</menu>

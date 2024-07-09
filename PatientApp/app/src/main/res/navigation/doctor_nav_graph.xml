@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/doctor_nav_graph"
+    app:startDestination="@id/doctorPatientInfoFragment">
+
+    <fragment
+        android:id="@+id/doctorMessageFragment"
+        android:name="com.mbaskan.patientapp.DoctorFragment.DoctorMessageFragment"
+        android:label="fragment_doctor_message"
+        tools:layout="@layout/fragment_doctor_message" >
+        <action
+            android:id="@+id/action_doctorMessageFragment_to_doctorPatientInfoFragment2"
+            app:destination="@id/doctorPatientInfoFragment" />
+        <action
+            android:id="@+id/action_doctorMessageFragment_to_doctorSettingsFragment2"
+            app:destination="@id/doctorSettingsFragment" />
+        <action
+            android:id="@+id/action_doctorMessageFragment_to_doctorMessagePreviousFragment"
+            app:destination="@id/doctorMessagePreviousFragment" />
+        <argument
+            android:name="userId"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="1" />
+        <action
+            android:id="@+id/action_doctorMessageFragment_to_doctorPersonelInfoFragment"
+            app:destination="@id/doctorPersonelInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/doctorSettingsFragment"
+        android:name="com.mbaskan.patientapp.DoctorFragment.DoctorSettingsFragment"
+        android:label="fragment_doctor_settings"
+        tools:layout="@layout/fragment_doctor_settings" >
+        <action
+            android:id="@+id/action_doctorSettingsFragment_to_doctorPatientInfoFragment2"
+            app:destination="@id/doctorPatientInfoFragment" />
+        <action
+            android:id="@+id/action_doctorSettingsFragment_to_doctorMessageFragment3"
+            app:destination="@id/doctorMessageFragment" />
+        <action
+            android:id="@+id/action_doctorSettingsFragment_to_doctorLoginActivity"
+            app:destination="@id/doctorLoginActivity" />
+        <action
+            android:id="@+id/action_doctorSettingsFragment_to_doctorPersonelInfoFragment"
+            app:destination="@id/doctorPersonelInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/doctorPatientInfoFragment"
+        android:name="com.mbaskan.patientapp.DoctorFragment.DoctorPatientInfoFragment"
+        android:label="fragment_doctor_patient_info"
+        tools:layout="@layout/fragment_doctor_patient_info" >
+        <action
+            android:id="@+id/action_doctorPatientInfoFragment_to_doctorMessageFragment2"
+            app:destination="@id/doctorMessageFragment" />
+        <action
+            android:id="@+id/action_doctorPatientInfoFragment_to_doctorSettingsFragment2"
+            app:destination="@id/doctorSettingsFragment" />
+        <action
+            android:id="@+id/action_doctorPatientInfoFragment_to_doctorPatientDetailFragment"
+            app:destination="@id/doctorPatientDetailFragment" />
+        <action
+            android:id="@+id/action_doctorPatientInfoFragment_to_doctorPersonelInfoFragment"
+            app:destination="@id/doctorPersonelInfoFragment" />
+    </fragment>
+    <activity
+        android:id="@+id/doctorLoginActivity"
+        android:name="com.mbaskan.patientapp.DoctorActivity.DoctorLoginActivity"
+        android:label="activity_doctor_login"
+        tools:layout="@layout/activity_doctor_login" />
+    <fragment
+        android:id="@+id/doctorMessagePreviousFragment"
+        android:name="com.mbaskan.patientapp.DoctorFragment.DoctorMessagePreviousFragment"
+        android:label="fragment_doctor_message_previous"
+        tools:layout="@layout/fragment_doctor_message_previous" >
+        <action
+            android:id="@+id/action_doctorMessagePreviousFragment_to_doctorMessageFragment"
+            app:destination="@id/doctorMessageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/doctorPatientDetailFragment"
+        android:name="com.mbaskan.patientapp.DoctorFragment.DoctorPatientDetailFragment"
+        android:label="fragment_doctor_patient_detail"
+        tools:layout="@layout/fragment_doctor_patient_detail" >
+        <argument
+            android:name="userId"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="1" />
+        <argument
+            android:name="userName"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="1" />
+    </fragment>
+    <fragment
+        android:id="@+id/doctorPersonelInfoFragment"
+        android:name="com.mbaskan.patientapp.DoctorFragment.DoctorPersonelInfoFragment"
+        android:label="fragment_doctor_personel_info"
+        tools:layout="@layout/fragment_doctor_personel_info" >
+        <action
+            android:id="@+id/action_doctorPersonelInfoFragment_to_doctorPatientInfoFragment"
+            app:destination="@id/doctorPatientInfoFragment" />
+        <action
+            android:id="@+id/action_doctorPersonelInfoFragment_to_doctorPatientDetailFragment"
+            app:destination="@id/doctorPatientDetailFragment" />
+    </fragment>
+</navigation>

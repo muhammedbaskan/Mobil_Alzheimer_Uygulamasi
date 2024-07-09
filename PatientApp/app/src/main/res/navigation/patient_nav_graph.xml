@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/patient_nav_graph"
+    app:startDestination="@id/patientMainpageFragment">
+
+    <fragment
+        android:id="@+id/patientMainpageFragment"
+        android:name="com.mbaskan.patientapp.PatientFragment.PatientMainpageFragment"
+        android:label="fragment_patient_mainpage"
+        tools:layout="@layout/fragment_patient_mainpage" >
+        <action
+            android:id="@+id/action_patientMainpageFragment_to_patientMedicineFragment"
+            app:destination="@id/patientMedicineFragment" />
+        <action
+            android:id="@+id/action_patientMainpageFragment_to_patientSettingsFragment"
+            app:destination="@id/patientSettingsFragment" />
+        <action
+            android:id="@+id/action_patientMainpageFragment_to_patientAlzheimerLifeInfoFragment"
+            app:destination="@id/patientAlzheimerLifeInfoFragment" />
+        <action
+            android:id="@+id/action_patientMainpageFragment_to_patientAlzheimerRiskInfoFragment"
+            app:destination="@id/patientAlzheimerRiskInfoFragment" />
+        <action
+            android:id="@+id/action_patientMainpageFragment_to_patientAlzheimerInfoFragment"
+            app:destination="@id/patientAlzheimerInfoFragment" />
+        <action
+            android:id="@+id/action_patientMainpageFragment_to_patientAlzheimerExerciseFragment"
+            app:destination="@id/patientAlzheimerExerciseFragment" />
+        <action
+            android:id="@+id/action_patientMainpageFragment_to_patientMessagePreviousFragment"
+            app:destination="@id/patientMessagePreviousFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/patientMedicineFragment"
+        android:name="com.mbaskan.patientapp.PatientFragment.PatientMedicineFragment"
+        android:label="fragment_patient_medicine"
+        tools:layout="@layout/fragment_patient_medicine" >
+        <action
+            android:id="@+id/action_patientMedicineFragment_to_patientMainpageFragment"
+            app:destination="@id/patientMainpageFragment" />
+        <action
+            android:id="@+id/action_patientMedicineFragment_to_patientSettingsFragment"
+            app:destination="@id/patientSettingsFragment" />
+        <action
+            android:id="@+id/action_patientMedicineFragment_to_patientMessagePreviousFragment"
+            app:destination="@id/patientMessagePreviousFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/patientMessageFragment"
+        android:name="com.mbaskan.patientapp.PatientFragment.PatientMessageFragment"
+        android:label="fragment_patient_message"
+        tools:layout="@layout/fragment_patient_message" >
+        <action
+            android:id="@+id/action_patientMessageFragment_to_patientMainpageFragment"
+            app:destination="@id/patientMainpageFragment" />
+        <action
+            android:id="@+id/action_patientMessageFragment_to_patientSettingsFragment"
+            app:destination="@id/patientSettingsFragment" />
+        <action
+            android:id="@+id/action_patientMessageFragment_to_patientMedicineFragment"
+            app:destination="@id/patientMedicineFragment" />
+        <action
+            android:id="@+id/action_patientMessageFragment_to_patientMessagePreviousFragment"
+            app:destination="@id/patientMessagePreviousFragment" />
+        <argument
+            android:name="doctorId"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="1" />
+    </fragment>
+    <fragment
+        android:id="@+id/patientSettingsFragment"
+        android:name="com.mbaskan.patientapp.PatientFragment.PatientSettingsFragment"
+        android:label="fragment_patient_settings"
+        tools:layout="@layout/fragment_patient_settings" >
+        <action
+            android:id="@+id/action_patientSettingsFragment_to_patientMainpageFragment"
+            app:destination="@id/patientMainpageFragment" />
+        <action
+            android:id="@+id/action_patientSettingsFragment_to_patientMedicineFragment"
+            app:destination="@id/patientMedicineFragment" />
+        <action
+            android:id="@+id/action_patientSettingsFragment_to_patientPersonelInfoFragment"
+            app:destination="@id/patientPersonelInfoFragment" />
+        <action
+            android:id="@+id/action_patientSettingsFragment_to_mainActivity"
+            app:destination="@id/mainActivity" />
+        <action
+            android:id="@+id/action_patientSettingsFragment_to_patientMessagePreviousFragment"
+            app:destination="@id/patientMessagePreviousFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/patientPersonelInfoFragment"
+        android:name="com.mbaskan.patientapp.PatientFragment.PatientPersonelInfoFragment"
+        android:label="fragment_patient_personel_info"
+        tools:layout="@layout/fragment_patient_personel_info" >
+        <action
+            android:id="@+id/action_patientPersonelInfoFragment_to_patientMainpageFragment"
+            app:destination="@id/patientMainpageFragment" />
+        <action
+            android:id="@+id/action_patientPersonelInfoFragment_to_patientMedicineFragment"
+            app:destination="@id/patientMedicineFragment" />
+        <action
+            android:id="@+id/action_patientPersonelInfoFragment_to_patientSettingsFragment"
+            app:destination="@id/patientSettingsFragment" />
+        <action
+            android:id="@+id/action_patientPersonelInfoFragment_to_patientMessagePreviousFragment"
+            app:destination="@id/patientMessagePreviousFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/patientAlzheimerLifeInfoFragment"
+        android:name="com.mbaskan.patientapp.PatientFragment.PatientAlzheimerLifeInfoFragment"
+        android:label="fragment_patient_alzheimer_life_info"
+        tools:layout="@layout/fragment_patient_alzheimer_life_info" >
+        <action
+            android:id="@+id/action_patientAlzheimerLifeInfoFragment_to_patientMainpageFragment"
+            app:destination="@id/patientMainpageFragment" />
+        <action
+            android:id="@+id/action_patientAlzheimerLifeInfoFragment_to_patientMedicineFragment"
+            app:destination="@id/patientMedicineFragment" />
+        <action
+            android:id="@+id/action_patientAlzheimerLifeInfoFragment_to_patientSettingsFragment"
+            app:destination="@id/patientSettingsFragment" />
+        <action
+            android:id="@+id/action_patientAlzheimerLifeInfoFragment_to_patientMessagePreviousFragment"
+            app:destination="@id/patientMessagePreviousFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/patientAlzheimerExerciseFragment"
+        android:name="com.mbaskan.patientapp.PatientFragment.PatientAlzheimerExerciseFragment"
+        android:label="fragment_patient_alzheimer_exercise"
+        tools:layout="@layout/fragment_patient_alzheimer_exercise" >
+        <action
+            android:id="@+id/action_patientAlzheimerExerciseFragment_to_patientMainpageFragment"
+            app:destination="@id/patientMainpageFragment" />
+        <action
+            android:id="@+id/action_patientAlzheimerExerciseFragment_to_patientMedicineFragment"
+            app:destination="@id/patientMedicineFragment" />
+        <action
+            android:id="@+id/action_patientAlzheimerExerciseFragment_to_patientSettingsFragment"
+            app:destination="@id/patientSettingsFragment" />
+        <action
+            android:id="@+id/action_patientAlzheimerExerciseFragment_to_patientMessagePreviousFragment"
+            app:destination="@id/patientMessagePreviousFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/patientAlzheimerInfoFragment"
+        android:name="com.mbaskan.patientapp.PatientFragment.PatientAlzheimerInfoFragment"
+        android:label="fragment_patient_alzheimer_info"
+        tools:layout="@layout/fragment_patient_alzheimer_info" >
+        <action
+            android:id="@+id/action_patientAlzheimerInfoFragment_to_patientMainpageFragment"
+            app:destination="@id/patientMainpageFragment" />
+        <action
+            android:id="@+id/action_patientAlzheimerInfoFragment_to_patientMedicineFragment"
+            app:destination="@id/patientMedicineFragment" />
+        <action
+            android:id="@+id/action_patientAlzheimerInfoFragment_to_patientSettingsFragment"
+            app:destination="@id/patientSettingsFragment" />
+        <action
+            android:id="@+id/action_patientAlzheimerInfoFragment_to_patientMessagePreviousFragment"
+            app:destination="@id/patientMessagePreviousFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/patientAlzheimerRiskInfoFragment"
+        android:name="com.mbaskan.patientapp.PatientFragment.PatientAlzheimerRiskInfoFragment"
+        android:label="fragment_patient_alzheimer_risk_info"
+        tools:layout="@layout/fragment_patient_alzheimer_risk_info" >
+        <action
+            android:id="@+id/action_patientAlzheimerRiskInfoFragment_to_patientMainpageFragment"
+            app:destination="@id/patientMainpageFragment" />
+        <action
+            android:id="@+id/action_patientAlzheimerRiskInfoFragment_to_patientMedicineFragment"
+            app:destination="@id/patientMedicineFragment" />
+        <action
+            android:id="@+id/action_patientAlzheimerRiskInfoFragment_to_patientSettingsFragment"
+            app:destination="@id/patientSettingsFragment" />
+        <action
+            android:id="@+id/action_patientAlzheimerRiskInfoFragment_to_patientMessagePreviousFragment"
+            app:destination="@id/patientMessagePreviousFragment" />
+    </fragment>
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="com.mbaskan.patientapp.PatientActivity.MainActivity"
+        android:label="activity_main"
+        tools:layout="@layout/activity_main" />
+    <fragment
+        android:id="@+id/patientMessagePreviousFragment"
+        android:name="com.mbaskan.patientapp.PatientFragment.PatientMessagePreviousFragment"
+        android:label="fragment_patient_message_previous"
+        tools:layout="@layout/fragment_patient_message_previous" >
+        <action
+            android:id="@+id/action_patientMessagePreviousFragment_to_patientMessageFragment"
+            app:destination="@id/patientMessageFragment" />
+        <action
+            android:id="@+id/action_patientMessagePreviousFragment_to_patientMainpageFragment"
+            app:destination="@id/patientMainpageFragment" />
+        <action
+            android:id="@+id/action_patientMessagePreviousFragment_to_patientMedicineFragment"
+            app:destination="@id/patientMedicineFragment" />
+        <action
+            android:id="@+id/action_patientMessagePreviousFragment_to_patientSettingsFragment"
+            app:destination="@id/patientSettingsFragment" />
+        <action
+            android:id="@+id/action_patientMessagePreviousFragment_to_patientMessageFragment2"
+            app:destination="@id/patientMessageFragment" />
+    </fragment>
+</navigation>

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".DoctorFragment.DoctorPersonelInfoFragment">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarDoctorPersonelInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="Bilgilerim" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayoutDoctorName"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="360dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="36dp"
+        android:hint="Adınız"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbarDoctorPersonelInfo">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/DoctorPersonalInfoName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayoutDoctorPhone"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="360dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="36dp"
+        android:hint="Telefon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayoutDoctorName">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/DoctorPersonalInfoPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayoutDoctorProvince"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="170dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="12dp"
+        android:hint="İl"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayoutDoctorPhone">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/DoctorPersonalInfoProvince"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayoutDoctorDistrict"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="170dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="26dp"
+        android:hint="İlçe"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayoutDoctorPhone">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/DoctorPersonalInfoDistrict"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayoutDoctorAdress"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="360dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="36dp"
+        android:hint="Adres"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayoutDoctorProvince">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/DoctorPersonalInfoAdress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <RadioGroup
+        android:id="@+id/doctorPersonalInfoRadioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayoutDoctorAdress">
+
+        <RadioButton
+            android:id="@+id/doctorPersonalInfoMaleRadioButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Erkek" />
+
+        <RadioButton
+            android:id="@+id/doctorPersonalInfoFemaleRadioButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Kadın" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/doctorPersonalInfoButton"
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_width="360dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="40dp"
+        android:onClick="doctorPersonalInfoButtonClick"
+        android:text="Kaydet"
+        android:textColor="@android:color/white"
+        app:cornerRadius="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/doctorPersonalInfoRadioGroup" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
